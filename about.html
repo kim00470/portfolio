@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/main.css">
 
@@ -16,14 +19,17 @@
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>michuhol_bros_home</title>
+    <title>Michuhol Bros. | About Us</title>
 </head>
 
 <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
     <div>
         <div class="header">
             <!-- Skip Link -->
-            <a href="#home_main" class="skip">Skip to main content <i class="fa fa-play"></i></a>
+            <a href="#about_main" class="skip">Skip to main content <i class="fa fa-play"></i></a>
             <!-- Site Logo -->
             <a href="index.html" class="sitelogo">
                 <img src="images_small/small_logo_main.png" alt="michuhol bros logo">
@@ -40,26 +46,60 @@
             </nav>
         </div>
         <div class="about_main" id="about_main">
-            <h3>Meet the Team</h3>
-            <img src="images_small/small_michuhol_bros.png" alt="">
+            <h3 role="heading">Meet the Team</h3>
+            <picture>
+                <source media="(max-width: 900px)" srcset="images_small/small_michuhol_bros.png">
+                <source media="(max-width: 1200px)" srcset="images_large/large_michuhol_bros.png">
+                <img class="michuhol" src="images_large/large_michuhol_bros.png" alt="logo of michuhol bros.">
+            </picture>
             <p>Meet the co-founders of a successful graphic design studio, who form a dynamic duo with their unique set of complementary skills. One of them is a creative and hardworking media design college student skilled in designing various marketing collaterals, possessing excellent communication and interpersonal skills, and is highly motivated to see projects through from concept to completion. The other co-founder is a passionate photography student with 3 years of experience in capturing the beauty of the world through a lens, continuously experimenting with new techniques and styles to push the boundaries of what is possible in the medium. Together, they work collaboratively to deliver visually stunning projects and are committed to improving their craft continuously.</p>
 
-            <h3>Our Clients</h3>
-            <img src="images_small/small_logo_atella.png" alt="">
-            <img src="images_small/small_logo_bgst.png" alt="">
-            <img src="images_small/small_logo_gd.png" alt="">
+            <h3 role="heading">Our Clients</h3>
+            <div class="row">     
+                <div class="col">
+                    <picture>
+                        <source media="(max-width: 900px)" srcset="images_small/small_logo_atella.png">
+                        <source media="(max-width: 1200px)" srcset="images_large/large_logo_atella.png">
+                        <img src="images_large/large_logo_atella.png" alt="logo of atella">
+                    </picture>
+                </div>
+                <div class="col">
+                    <picture>
+                        <source media="(max-width: 900px)" srcset="images_small/small_logo_bgst.png">
+                        <source media="(max-width: 1200px)" srcset="images_large/large_logo_bgst.png">
+                        <img src="images_large/large_logo_bgst.png" alt="logo of bgst.">
+                    </picture>
+                </div>
+                <div class="col">
+                    <picture>
+                        <source media="(max-width: 900px)" srcset="images_small/small_logo_gd.png">
+                        <source media="(max-width: 1200px)" srcset="images_large/large_logo_gd.png">
+                        <img src="images_large/large_logo_gd.png" alt="logo of galaxy doughnuts">
+                    </picture>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Footer -->
     <footer>
-        <img src="images_small/small_logo_footer.png" alt="michuhol bros logo">
-        <p>Copyright&copy; 2023 Michuhol Bros.</p>
-        <div class="socialmedia">
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-twitter"></a>
-        </div>
+        <div class="wrapper row">
+            <div class="col-2">
+                <a href="index.html" class="footerlogo">
+                <img src="images_small/small_logo_footer.png" alt="michuhol bros logo">
+                </a>
+            </div>
+            <div class="col-6">
+                <p class="copyright">Copyright&copy; 2023 Michuhol Bros.</p>
+            </div>
+            <div class="col-4">
+                <div class="socialmedia">
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+                    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                </div>
+            </div> 
+        </div>          
     </footer>
 </body>
 

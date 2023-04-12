@@ -1,6 +1,4 @@
-
-
-/* Common: Adds skip links, determines fonts, text colour and content width */
+/* Common */
 body {
     font-family: "futura-pt", sans-serif;
     font-weight: 400;
@@ -14,9 +12,14 @@ body {
 .home_main,
 .about_main,
 .contact_main,
-.source_main {
-    padding-left: 10%;
-    padding-right: 10%;
+.wrapper {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.graphic_design_main {
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 nav,
@@ -24,14 +27,17 @@ button,
 h1,
 h2,
 h3,
-h4,
-h5,
 .skip {
     font-family: "futura-pt", sans-serif;
     font-weight: 600;
     font-style: normal;
     color: #FFFFFF;
     margin: 0;
+}
+
+h3, p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .skip {
@@ -51,18 +57,50 @@ h5,
     background-color: #D4B483;
 }
 
-
 /* Site Header: Logo, Navigation bar*/
+
+.sitelogo {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    width: 25%;
+}
+
+hr {
+    border: 2px solid #D4B483;
+}
+
 img {
+    display: block;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbnail_1 {
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.thumbnail_2 {
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    padding-left: 0;
+    padding-right: 0;
+    --bs-gutter-x: 0;
 }
 
 nav {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .navbar {
-    /* Flex used to align Navigation Links horizontally */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -84,7 +122,6 @@ li {
 }
 
 .navbar a:hover {
-    /* Hover animation */
     transform: scale(0.9);
     transition: 0.25s;
 }
@@ -94,26 +131,14 @@ li {
 }
 
 ul.no-bullets {
-    /* Removes Bullets from the unordered list*/
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.sitelogo {
-    text-align: center;
-    display: block;
-    margin: auto;
-    margin-top: 2rem;
-    width: 50%;
-}
-
-hr {
-    border: 2px solid #D4B483;
-}
-
 
 /* Footer */
+
 footer {
     background-color: #333333;
     padding: 1rem;
@@ -121,16 +146,22 @@ footer {
     color: white;
 }
 
-footer h2 {
-    color: white;
-    margin: 0.5rem 0 0 4rem;
-    font-size: 4rem;
+.footerlogo {
+    text-align: center;
+
+    margin-top: 1rem;
+    width: 25%;
 }
 
-footer p {
+.copyright {
     color: white;
-    margin: 1rem 0 0.5rem 4rem;
+    margin: 2rem 0 0.5rem 0;
     font-size: 1rem;
+}
+
+.socialmedia {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;    
 }
 
 .fa {
@@ -148,137 +179,18 @@ footer p {
       opacity: 0.75;
 }
   
-
-
-
 /* Home Page */
-.banner {
-    /* Grid used to layout many elements without using positioning properties */
-    display: grid;
-    grid-template-columns: 4;
-    grid-template-rows: 3;
-    grid-template-areas:
-        "doughnut_1 doughnut_1 doughnut_1 doughnut_1"
-        "doughnut_2 doughnut_3 doughnut_4 doughnut_5"
-        "button_1 button_1 button_1 button_1";
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
 
-.doughnut_1 {
-    grid-area: doughnut_1;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.doughnut_2 {
-    grid-area: doughnut_2;
-    width: 100%;
-}
-
-.doughnut_3 {
-    grid-area: doughnut_3;
-    width: 100%;
-}
-
-.doughnut_4 {
-    grid-area: doughnut_4;
-    width: 100%;
-}
-
-.doughnut_5 {
-    grid-area: doughnut_5;
-    width: 100%;
-}
-
-.button_1 {
-    grid-area: button_1;
-    width: 50%;
-    height: 5rem;
-    margin: auto;
-    margin-top: 2rem;
-}
-
-.wrapper_1 {
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 6;
-    grid-template-areas:
-        "doughnut_6 doughnut_6 doughnut_6"
-        "doughnut_7 box_1 box_1"
-        "box_2 box_2 doughnut_8"
-        "doughnut_9 box_3 box_3"
-        "box_4 box_4 doughnut_10"
-        "button_2 button_2 button_2";
-    margin-bottom: 4rem;
-    max-width: 100%;
-}
-
-.doughnut_6 {
-    grid-area: doughnut_6;
-    width: 100%;
-    margin-bottom: 4rem;
-}
-
-.doughnut_7 {
-    grid-area: doughnut_7;
-    max-width: 100%;
-    margin-bottom: 2rem;
-}
-
-.doughnut_8 {
-    grid-area: doughnut_8;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.doughnut_9 {
-    grid-area: doughnut_9;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.doughnut_10 {
-    grid-area: doughnut_10;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.box_1 {
-    grid-area: box_1;
-    max-width: 100%;
-    margin-left: 4rem;
-    margin-bottom: 2rem;
-}
-
-.box_2 {
-    grid-area: box_2;
-    max-width: 100%;
-    margin-right: 4rem;
-    margin-bottom: 2rem;
-}
-
-.box_3 {
-    grid-area: box_3;
-    max-width: 100%;
-    margin-left: 4rem;
-    margin-bottom: 2rem;
-}
-
-.box_4 {
-    grid-area: box_4;
-    max-width: 100%;
-    margin-right: 4rem;
-    margin-bottom: 2rem;
-}
-
-.button_2 {
-    grid-area: button_2;
-    width: 50%;
-    height: 5rem;
-    margin: auto;
-    margin-top: 2rem;
+.home_main {
     margin-bottom: 8rem;
+}
+
+.box {
+    background-color: #555555;
+    width: 60%;
+    margin: auto;
+    margin-top: 4rem;
+
 }
 
 button {
@@ -291,131 +203,68 @@ button {
     display: inline-block;
     font-size: 2.5rem;
     margin: 4px 2px;
-    /* cursor: pointer; used for clickable elements */
     cursor: pointer;
-    /* border-radius used for round buttons */
     border-radius: 48px;
 }
 
 .button a:hover {
-    /* Hover animation */
     transform: scale(0.9);
     transition: 0.25s;
 }
 
+/* Graphic Design Page */
 
-/* About Page */
-.about_main {
-    /* flex used to easily list the elements in a row vertically */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+.graphic_design_main {
     margin-bottom: 8rem;
 }
 
-.heading_1,
-.subheading,
-.doughnut_11,
-.box_5,
-.subheading_2,
-.doughnut_12,
-.box_6 {
-    flex-basis: calc(100%);
-}
-
-.heading_1 {
-    margin: 2rem 0 4rem 0;
-}
-
-.subheading_1,
-.subheading_2 {
+.button_1 {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    height: 5rem;
+    margin-top: 10rem;
     margin-bottom: 2rem;
 }
 
-.box_5 {
+.box_1 {
+    text-align: center;
+}
+
+/* About Page */
+.about_main {
     margin-bottom: 8rem;
 }
 
-.box_6 {
-    margin-bottom: 4rem;
-}
-
-
 /* Contact Page */
 .contact_main {
-    margin-bottom: 16rem;
-}
-
-.heading_2 {
-    margin: 2rem 0 4rem 0;
-}
-
-.fulllogo {
-    margin: auto;
-    margin-top: 4rem;
     margin-bottom: 4rem;
-    text-align: center;
-    display: block;
-    width: 50%;
 }
 
-.contactinfo li {
-    margin: 1rem 0 2rem 0;
+.img-fluid {
+    margin: auto;
+    width: 100%;
 }
 
 input[type=text],
 textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 2px solid #D4B483;
-    border-radius: 12px;
+    border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 1rem;
     resize: vertical;
 }
 
-.message {
-    margin: 4rem 0 2rem 0;
-
-}
-
-.submitbutton {
-    margin: auto;
+.button_2 {
     text-align: center;
-    display: block;
-    width: 50%;
-}
-
-
-/* Image Source Page */
-
-.source_main {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    width: 75%;
+    height: 5rem;
+    margin: auto;
+    margin-top: 2rem;
     margin-bottom: 8rem;
 }
-
-.image {
-    max-width: 15%;
-    height: auto;
-    flex-basis: calc(15%);
-    padding-bottom: 2rem;
-}
-
-.source {
-    flex-basis: calc(75%);
-    padding-bottom: 2rem;
-    padding-left: 2rem;
-}
-
-.heading_3 {
-    flex-basis: calc(100%);
-    margin: 2rem 0 4rem 0;
-}
-
 
 /* Media Query */
 
@@ -424,10 +273,6 @@ textarea {
 
     body {
         font-size: 16px;
-    }
-
-    .navbar a {
-        font-size: 28px;
     }
 
     footer h2 {
@@ -445,11 +290,11 @@ textarea {
     }
 
     .navbar a {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 
-/* Small-Medium Devices */
+/* Medium-large Devices */
 @media only screen and (min-width: 600px) {
 
     body {
@@ -472,31 +317,5 @@ textarea {
 
     .navbar a {
         font-size: 28px;
-    }
-}
-
-/* Medium-Large Devices */
-@media only screen and (min-width: 992px) {
-
-    body {
-        font-size: 28px;
-    }
-
-    footer h2 {
-        margin: 0.5rem 0 0 4rem;
-        font-size: 4rem;
-    }
-
-    footer p {
-        margin: 1rem 0 0.5rem 4rem;
-        font-size: 1rem;
-    }
-
-    button {
-        font-size: 2.5rem;
-    }
-
-    .navbar a {
-        font-size: 34px;
     }
 }
